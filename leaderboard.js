@@ -111,8 +111,8 @@ if (Meteor.isServer) {
 
   });
 
-  //Meteor.publish('players', function(){
-  	//var currentUserId = this.userId;
-  	//return Players.find({createdBy: currentUserId})
-    //});
+  Meteor.publish('players', function(){
+  	var currentUserId = this.userId;
+  	return Players.find({createdBy: currentUserId})
+  });
 } 
